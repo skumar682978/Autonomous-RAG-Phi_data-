@@ -5,6 +5,7 @@ Project Summary
 
 Utilizes the dotenv library to load environment variables, specifically the OpenAI API key.
 Sets up the PostgreSQL database URL for storing the assistant's data.
+
 - Assistant Setup:
 
 Defines a function setup_assistant to create an instance of an assistant named "AutoRAG".
@@ -13,10 +14,12 @@ Configures the assistant with:
 - Storage in a PostgreSQL database.
 - A knowledge base using vector embeddings for document retrieval.
 - Clear instructions for handling user queries.
-Knowledge Base Management:
+  
+-Knowledge Base Management:
 
-Implements add_document_to_kb to read and add documents (PDF format) to the assistant's knowledge base.
-Uses a PDF reader to extract and load document content into the knowledge base, logging the outcome.
+-- Implements add_document_to_kb to read and add documents (PDF format) to the assistant's knowledge base.
+-- Uses a PDF reader to extract and load document content into the knowledge base, logging the outcome.
+
 Query Handling:
 
 Defines query_assistant to process user queries through the assistant.
