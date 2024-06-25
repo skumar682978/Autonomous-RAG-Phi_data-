@@ -1,6 +1,6 @@
 # Autonomous-RAG-Phi_data-
 
-Project Summary
+## Project Summary
 1) Environment Setup:
 
 -Utilizes the dotenv library to load environment variables, specifically the OpenAI API key.
