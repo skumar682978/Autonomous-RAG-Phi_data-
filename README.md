@@ -7,7 +7,7 @@
 - Utilizes the dotenv library to load environment variables, specifically the OpenAI API key.
 - Sets up the PostgreSQL database URL for storing the assistant's data.
 
-2) Assistant Setup:
+### 2) Assistant Setup:
 
 Defines a function setup_assistant to create an instance of an assistant named "AutoRAG".
 Configures the assistant with:
@@ -16,17 +16,17 @@ Configures the assistant with:
 - A knowledge base using vector embeddings for document retrieval.
 - Clear instructions for handling user queries.
   
-3) Knowledge Base Management:
+### 3) Knowledge Base Management:
 
 - Implements add_document_to_kb to read and add documents (PDF format) to the assistant's knowledge base.
 - Uses a PDF reader to extract and load document content into the knowledge base, logging the outcome.
 
-4) Query Handling:
+### 4) Query Handling:
 
 - Defines query_assistant to process user queries through the assistant.
 - Collects responses incrementally and returns the final consolidated response.
   
-5) Main Execution:
+### 5) Main Execution:
 
 - Applies asynchronous capabilities using nest_asyncio.
 - Retrieves the LLM model name from environment variables (defaulting to GPT-4o if not set).
@@ -34,13 +34,13 @@ Configures the assistant with:
 - Adds a sample PDF document to the assistant's knowledge base.
 - Runs a sample query to demonstrate the assistant's functionality.
   
-6) Tools and Features:
+### 6) Tools and Features:
 
 - Integrates tools like DuckDuckGo for web searches when the knowledge base lacks relevant information.
 - Enables capabilities to reference chat history and add timestamps to instructions.
 - Provides a detailed description and instructions to ensure the assistant delivers accurate and helpful responses.
   
-7) Logging and Debugging:
+### 7) Logging and Debugging:
 
 - Configures a logger to track the addition of documents to the knowledge base and any errors encountered.
 - Activates debug mode to facilitate troubleshooting and enhance transparency in the assistant's operations.
