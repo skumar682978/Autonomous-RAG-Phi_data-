@@ -1,10 +1,11 @@
 # Autonomous-RAG-Phi_data-
 
 ## Project Summary
+
 1) Environment Setup:
 
--Utilizes the dotenv library to load environment variables, specifically the OpenAI API key.
--Sets up the PostgreSQL database URL for storing the assistant's data.
+- Utilizes the dotenv library to load environment variables, specifically the OpenAI API key.
+- Sets up the PostgreSQL database URL for storing the assistant's data.
 
 2) Assistant Setup:
 
