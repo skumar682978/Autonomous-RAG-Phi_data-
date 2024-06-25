@@ -1,0 +1,160 @@
+|------------------------------------------------------------------|
+|                Question -> WHERE DID ALDRIC LIVE                 |
+|------------------------------------------------------------------|
+
+
+(autorag_phidata) F:\autorag_phidata>python app.py
+DEBUG    Debug logs enabled
+INFO     Reading: The_mystic_mountains
+INFO     Loading knowledge base
+DEBUG    Creating collection
+DEBUG    Checking if table exists: auto_rag_documents_openai
+DEBUG    Upserted document: The_mystic_mountains_1_1 | The_mystic_mountains | {'page': 1, 'chunk': 1, 'chunk_size': 3000}
+DEBUG    Upserted document: The_mystic_mountains_1_2 | The_mystic_mountains | {'page': 1, 'chunk': 2, 'chunk_size': 309}
+DEBUG    Upserted document: The_mystic_mountains_2_1 | The_mystic_mountains | {'page': 2, 'chunk': 1, 'chunk_size': 419}
+INFO     Committed 3 documents
+INFO     Loaded 3 documents to knowledge base
+DEBUG    *********** Assistant Run Start: c66e1ae3-43f2-4ce3-9391-33c5785e0c96 ***********
+DEBUG    Loaded memory
+DEBUG    Function get_chat_history added to LLM.
+DEBUG    Function search_knowledge_base added to LLM.
+DEBUG    Function duckduckgo_search from duckduckgo added to LLM.
+DEBUG    Function duckduckgo_news from duckduckgo added to LLM.
+DEBUG    ---------- OpenAI Response Start ----------
+DEBUG    ============== system ==============
+DEBUG    You are a helpful Assistant called 'AutoRAG' and your goal is to assist the user in the best way possible.
+         You must follow these instructions carefully:
+         <instructions>
+         1. Given a user query, first ALWAYS search your knowledge base using the `search_knowledge_base` tool to see if you have relevant
+         information.
+         2. If you don't find relevant information in your knowledge base, use the `duckduckgo_search` tool to search the internet.
+         3. If you need to reference the chat history, use the `get_chat_history` tool.
+         4. If the users question is unclear, ask clarifying questions to get more information.
+         5. Carefully read the information you have gathered and provide a clear and concise answer to the user.
+         6. Do not use phrases like 'based on my knowledge' or 'depending on the information'.
+         7. Use markdown to format your answers.
+         8. The current time is 2024-06-09 13:01:20.005963
+         </instructions>
+DEBUG    ============== user ==============
+DEBUG    In which mountains did Aldric live?
+DEBUG    Time to generate response: 0.8921s
+DEBUG    Estimated completion tokens: 0
+DEBUG    ============== assistant ==============
+DEBUG    Tool Calls: [
+           {
+             "id": "call_nAX6uFBrxiRlFWOrDYjeRtDN",
+             "type": "function",
+             "function": {
+               "name": "search_knowledge_base",
+               "arguments": "{\"query\":\"Aldric mountains\"}"
+             }
+           }
+         ]
+DEBUG    Getting function search_knowledge_base
+DEBUG    Running: search_knowledge_base(query=Aldric mountains)
+DEBUG    Getting 3 relevant documents for query: Aldric mountains
+DEBUG    Query: SELECT ai.auto_rag_documents_openai.name, ai.auto_rag_documents_openai.meta_data, ai.auto_rag_documents_openai.content,
+         ai.auto_rag_documents_openai.embedding, ai.auto_rag_documents_openai.usage
+         FROM ai.auto_rag_documents_openai ORDER BY ai.auto_rag_documents_openai.embedding <=> :embedding_1
+          LIMIT :param_1
+DEBUG    ---------- OpenAI Response Start ----------
+DEBUG    ============== system ==============
+DEBUG    You are a helpful Assistant called 'AutoRAG' and your goal is to assist the user in the best way possible.
+         You must follow these instructions carefully:
+         <instructions>
+         1. Given a user query, first ALWAYS search your knowledge base using the `search_knowledge_base` tool to see if you have relevant
+         information.
+         2. If you don't find relevant information in your knowledge base, use the `duckduckgo_search` tool to search the internet.
+         3. If you need to reference the chat history, use the `get_chat_history` tool.
+         4. If the users question is unclear, ask clarifying questions to get more information.
+         5. Carefully read the information you have gathered and provide a clear and concise answer to the user.
+         6. Do not use phrases like 'based on my knowledge' or 'depending on the information'.
+         7. Use markdown to format your answers.
+         8. The current time is 2024-06-09 13:01:20.005963
+         </instructions>
+DEBUG    ============== user ==============
+DEBUG    In which mountains did Aldric live?
+DEBUG    ============== assistant ==============
+DEBUG    Tool Calls: [
+           {
+             "id": "call_nAX6uFBrxiRlFWOrDYjeRtDN",
+             "type": "function",
+             "function": {
+               "name": "search_knowledge_base",
+               "arguments": "{\"query\":\"Aldric mountains\"}"
+             }
+           }
+         ]
+DEBUG    ============== tool ==============
+DEBUG    Call Id: call_nAX6uFBrxiRlFWOrDYjeRtDN
+DEBUG    [
+           {
+             "content": "The mystic mountains --------------------- In the misty peaks of the ancient Sierra Mountains, there lived a reclusive     
+         magician named Aldric. High above the valleys, in a hidden cave veiled by centuries of secrecy, dwelled the legendary sorcerer Eamon. Eamon
+         was known to few and seen by even fewer, but his mastery of the arcane arts was unparalleled. One fateful day, a young and ambitious       
+         magician named Thane arrived at Eamon\u2019s cave. Driven by a thirst for power and knowledge, Thane had trekked through treacherous       
+         terrain to seek the wisdom of the mountain sage. Impressed by Thane's determination, Eamon agreed to take him under his wing. For years,   
+         Thane studied diligently. Eamon taught him the secrets of the elements, the weaving of spells, and the delicate balance of magic and       
+         nature. Thane\u2019s powers grew exponentially, but so did his desire for greatness. The knowledge he acquired was intoxicating, and soon, 
+         his ambition turned into a dangerous obsession. One evening, as the sun dipped below the horizon, Thane approached Eamon with a sinister   
+         proposition. \"Master, we could rule the world together. With our combined powers, nothing could stand in our way.\" Eamon's heart sank,   
+         for he had seen this corruption of spirit before. He refused, hoping to steer Thane back onto a righteous path. Angered and feeling        
+         betrayed, Thane left the cave under the cover of darkness. He ventured into the world below, using his magic to bend people to his will,   
+         amassing power and followers. His heart hardened, and he became known as the Dark Conjurer, spreading fear and chaos wherever he went.     
+         Eamon, sensing the growing darkness, knew he had to act. He left his solitary cave for the first time in decades and descended into the    
+         world that Thane now terrorized. The confrontation was inevitable. In the shadow of the mountains, amidst ancient ruins, master and        
+         apprentice met. The air crackled with magical energy as they faced each other. Thane, cloaked in darkness, sneered. \"You are too late, old
+         man. The world will be mine!\" Eamon\u2019s eyes blazed with a sorrowful determination. \"You have lost your way, Thane. But this ends     
+         now.\" The battle was fierce and awe-inspiring. Thane summoned storms and shadows, hurling them at his former master with lethal intent.   
+         Eamon countered with blinding light and elemental forces, each spell a testament to his deep connection with the natural world. The ground 
+         trembled and the sky darkened as their powers clashed. Eamon\u2019s strength lay in his years of wisdom and his deep-rooted knowledge of   
+         balance, while Thane\u2019s raw power was fueled by his insatiable ambition. The fight raged on, magic tearing the landscape apart. In a   
+         final, desperate move, Thane unleashed a spell of unimaginable destruction, but Eamon, drawing upon the very essence of the mountains      
+         around them, countered with a binding spell. The earth itself seemed to rise and wrap around Thane, his power contained and neutralized. As
+         Thane fell to his knees, his dark magic dissipating,",
+             "name": "The_mystic_mountains",
+             "meta_data": {
+               "page": 1,
+               "chunk": 1,
+               "chunk_size": 3000
+             }
+           },
+           {
+             "content": "carried him back to the cave, where he laid him to rest. The mountain sage knew that even in darkness, there was a chance  
+         for redemption, and he would watch over Thane, hoping for the day his former pupil might find peace. The tale of Eamon and Thane became    
+         legend, a story whispered among the valleys and peaks, a reminder of the thin line between ambition and madness, and the enduring power of 
+         wisdom and compassion.",
+             "name": "The_mystic_mountains",
+             "meta_data": {
+               "page": 2,
+               "chunk": 1,
+               "chunk_size": 419
+             }
+           },
+           {
+             "content": " Eamon approached him. \"You could have been the greatest of us, Thane, but your heart was consumed by darkness.\"
+         Thane\u2019s eyes, once burning with ambition, now filled with regret. \"Forgive me, Master,\" he whispered, before collapsing. Eamon      
+         sighed, his heart heavy with sorrow. He lifted Thane\u2019s limp form and ",
+             "name": "The_mystic_mountains",
+             "meta_data": {
+               "page": 1,
+               "chunk": 2,
+               "chunk_size": 309
+             }
+           }
+         ]
+DEBUG    Time to first token: 0.9863s
+DEBUG    Time to generate response: 1.0117s
+DEBUG    Time per output token: 0.0920s
+DEBUG    Throughput: 10.8730 tokens/s
+DEBUG    Estimated completion tokens: 11
+DEBUG    ============== assistant ==============
+DEBUG    Aldric lived in the ancient Sierra Mountains.
+DEBUG    ---------- OpenAI Response End ----------
+DEBUG    ---------- OpenAI Response End ----------
+DEBUG    *********** Assistant Run End: c66e1ae3-43f2-4ce3-9391-33c5785e0c96 ***********
+Query: In which mountains did Aldric live?
+Response:
+ - Running: search_knowledge_base(query=Aldric mountains)
+
+Aldric lived in the ancient Sierra Mountains.
