@@ -1,18 +1,18 @@
 # Autonomous-RAG-Phi_data-
 
 Project Summary
--Environment Setup:
+- Environment Setup:
 
 Utilizes the dotenv library to load environment variables, specifically the OpenAI API key.
 Sets up the PostgreSQL database URL for storing the assistant's data.
--Assistant Setup:
+- Assistant Setup:
 
 Defines a function setup_assistant to create an instance of an assistant named "AutoRAG".
 Configures the assistant with:
--A language model (LLM) from OpenAI.
--Storage in a PostgreSQL database.
--A knowledge base using vector embeddings for document retrieval.
--Clear instructions for handling user queries.
+- A language model (LLM) from OpenAI.
+- Storage in a PostgreSQL database.
+- A knowledge base using vector embeddings for document retrieval.
+- Clear instructions for handling user queries.
 Knowledge Base Management:
 
 Implements add_document_to_kb to read and add documents (PDF format) to the assistant's knowledge base.
