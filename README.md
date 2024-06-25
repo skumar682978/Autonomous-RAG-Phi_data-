@@ -2,7 +2,7 @@
 
 ## Project Summary
 
-1) Environment Setup:
+### 1) Environment Setup:
 
 - Utilizes the dotenv library to load environment variables, specifically the OpenAI API key.
 - Sets up the PostgreSQL database URL for storing the assistant's data.
